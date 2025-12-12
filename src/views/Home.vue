@@ -13,7 +13,7 @@
             </div>
 
             <div class="col profile-cont">
-                
+                <img src="../assets/profile.png" alt="profile">
             </div>
         </div>
 
