@@ -30,7 +30,7 @@
                             <img src="../assets/projects/DNSCFNDR.png" alt="Reload">
                         </div>
                         <div class="card-footer">
-                            A web-based application that helps students find their lost items.
+                            A web-bsed application that helps students find their lost items.
                         </div>
                     </div>
                 </div>
