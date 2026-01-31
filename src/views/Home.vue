@@ -17,6 +17,57 @@
             </div>
         </div>
 
+        <div id="projects">
+            <h1>Projects</h1>
+
+            <div class="row g-0">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">DNSC Findr (Final)</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/DNSCFNDR.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A web-based application that helps students find their lost items.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">DNSC Findr (UI)</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/DNSCFNDR.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A web-based application that helps students find their lost items.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">Online Paluwagan System</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/OPS.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A desktop-based application that helps manage paluwagan transactions.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">Simple Ordering System</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/SOS.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A web-based application that helps manage orders in a restaurant.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="about">
             <h1>About</h1>
             <p>This is about section</p>
