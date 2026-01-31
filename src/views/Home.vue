@@ -13,18 +13,64 @@
             </div>
 
             <div class="col profile-cont">
-                
+                <img src="../assets/profile.png" alt="profile">
+            </div>
+        </div>
+
+        <div id="projects">
+            <h1>Projects</h1>
+
+            <div class="row g-0">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">DNSC Findr (Final)</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/DNSCFNDR.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A web-based application that helps students find their lost items.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">DNSC Findr (UI)</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/DNSCFNDR.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A web-based application that helps students find their lost items.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">Online Paluwagan System</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/OPS.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A desktop-based application that helps manage paluwagan transactions.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">Simple Ordering System</div>
+                        <div class="card-body">
+                            <img src="../assets/projects/SOS.png" alt="Reload">
+                        </div>
+                        <div class="card-footer">
+                            A web-based application that helps manage orders in a restaurant.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="about">
             <h1>About</h1>
             <p>This is about section</p>
-        </div>
-
-        <div id="portfolio">
-            <h1>Portfolio</h1>
-            <p>This is portfolio section</p>
         </div>
 
         <div id="contact">
@@ -87,6 +133,44 @@
 #hero .intro-cont p span:last-child {
     color: #1E90FF;
 }
+
+#projects .row {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projects .col {
+    flex: 1 1 calc(25% - 24px);
+    min-width: 250px;
+}
+
+#projects .card .card-header,
+#projects .card .card-body,
+#projects .card .card-footer {
+    border: none;
+    background-color: #f2f2f2;
+}
+
+#projects .card .card-header {
+    font-size: 18px;
+    text-align: center;
+    color: #1E8CF8;
+}
+
+#projects .card .card-footer {
+    text-align: center;
+    color: #555;
+}
+
+#projects .card img {
+    width: 100%;
+    height: 250px;  
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 
 @keyframes typingH {
     from {
@@ -189,7 +273,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1400px) {
     #hero {
         flex-direction: column;
         justify-content: center;

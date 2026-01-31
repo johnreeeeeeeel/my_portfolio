@@ -20,10 +20,10 @@
                     <Icon icon="material-symbols:menu-rounded" width="32" height="32" />
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Home</a></li>
-                    <li><a class="dropdown-item" href="#">About</a></li>
-                    <li><a class="dropdown-item" href="#">Portfolio</a></li>
-                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                    <li><a class="dropdown-item" href="#hero">Home</a></li>
+                    <li><a class="dropdown-item" href="#about">About</a></li>
+                    <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+                    <li><a class="dropdown-item" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
