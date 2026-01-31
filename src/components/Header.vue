@@ -85,7 +85,7 @@ header .links-container {
 }
 
 header .links-container a {
-    font-size: 20px;
+    font-family: "Changa One", sans-serif;
     color: white;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -108,7 +108,7 @@ header .links-dropdown .dropdown-menu {
 }
 
 header .links-dropdown .dropdown-menu a {
-    font-size: 20px;
+    font-family: "Changa One", sans-serif;
     color: #242424;
     text-decoration: none;
     border-radius: 8px;

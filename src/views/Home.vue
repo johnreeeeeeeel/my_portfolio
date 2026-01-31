@@ -3,12 +3,35 @@
 
         <div id="hero" class="row">
             <div class="col intro-cont">
-                <h1>Hi I am Feby Johnrel R. Malbino</h1>
-                <p>I love <span>Designing</span> and still <span>learning</span> :></p>
+                <h1>Hi I am Johnrel</h1>
+
+                <div style="margin-bottom: 18px;">
+                    <p>I'm a BSIT student, still learning and improving my skills.</p>
+                    <p>I'm passionate about creating and designing.</p>
+                    <p>Beside coding, I also enjoy film making.</p>
+                </div>
 
                 <div class="action-buttons">
                     <button type="button" class="btn primary-btn">About Me</button>
-                    <button type="button" class="btn secondary-btn">Contact</button>
+                    <button type="button" class="btn transparent-btn">
+                        My Projects
+                        <Icon icon="mingcute:right-line" />
+                    </button>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/johnreeeeeeeel" target="_blank">
+                        <Icon icon="mingcute:github-fill" width="32" height="32" />
+                    </a>
+                    <a href="https://www.facebook.com/f.johnreeeeeeeel" target="_blank">
+                        <Icon icon="mingcute:facebook-fill" width="32" height="32" />
+                    </a>
+                    <a href="https://www.tiktok.com/@johnreeeeeeeel" target="_blank">
+                        <Icon icon="mingcute:tiktok-fill" width="32" height="32" />
+                    </a>
+                    <a href="https://www.instagram.com/john.reeeeeeeel" target="_blank">
+                        <Icon icon="mingcute:instagram-fill" width="32" height="32" />
+                    </a>
                 </div>
             </div>
 
@@ -18,7 +41,7 @@
         </div>
 
         <div id="projects">
-            <h1>Projects</h1>
+            <h1 style="font-family: 'Changa One', sans-serif; margin-bottom: 8px;">Projects</h1>
 
             <div class="row g-0">
                 <div class="col">
@@ -69,12 +92,12 @@
         </div>
 
         <div id="about">
-            <h1>About</h1>
+            <h1 style="font-family: 'Changa One', sans-serif; margin-bottom: 8px;">About Me</h1>
             <p>This is about section</p>
         </div>
 
         <div id="contact">
-            <h1>Contact</h1>
+            <h1 style="font-family: 'Changa One', sans-serif; margin-bottom: 8px;">Contact Me</h1>
             <form action="https://formsubmit.co/fc7edbabf57d93ec3a7604557c91ee6d" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -122,27 +145,20 @@
 }
 
 #hero .intro-cont h1 {
-    font-size: clamp(28px, 6vw, 56px);
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(64px, 6vw, 84px);
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid #1E90FF;
+    margin-bottom: 18px;
     animation: typingH 3s steps(38, end) forwards, blink 0.75s step-end infinite;
 }
 
 #hero .intro-cont p {
-    font-size: clamp(16px, 4vw, 28px);
+    font-size: clamp(16px, 4vw, 16px);
+    font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid #1E90FF;
     animation: typingP 3s steps(32, end) forwards, blink 0.75s step-end infinite;
-}
-
-#hero .intro-cont p span:first-child {
-    animation: rainbow 1s linear infinite;
-}
-
-#hero .intro-cont p span:last-child {
-    color: #1E90FF;
 }
 
 @keyframes typingH {
@@ -151,7 +167,7 @@
     }
 
     to {
-        width: 28ch;
+        width: 12ch;
     }
 }
 
@@ -161,43 +177,7 @@
     }
 
     to {
-        width: 32ch;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-@keyframes rainbow {
-    0% {
-        color: #FF0000;
-    }
-
-    16% {
-        color: #FF7F00;
-    }
-
-    32% {
-        color: #FFFF00;
-    }
-
-    48% {
-        color: #00FF00;
-    }
-
-    64% {
-        color: #0000FF;
-    }
-
-    80% {
-        color: #4B0082;
-    }
-
-    100% {
-        color: #FF00FF;
+        width: 40ch;
     }
 }
 
@@ -210,8 +190,8 @@
 #hero .intro-cont .action-buttons .btn {
     color: #f2f2f2;
     outline: none;
-    padding: 4px 12px;
-    font-size: clamp(16px, 2.5vw, 20px);
+    border: none;
+    padding: 8px 12px;
     border-radius: 12px;
 }
 
@@ -230,6 +210,20 @@
 #hero .intro-cont .action-buttons .secondary-btn.secondary-btn:hover {
     border: 2px solid #1E90FF;
     background-color: #1E90FF;
+}
+
+#hero .intro-cont .social-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 48px;
+}
+
+#hero .intro-cont .social-links a {
+    color: #1E90FF;
+}
+
+#hero .intro-cont .social-links a:hover {
+    color: #1877d6;
 }
 
 #hero .profile-cont {
@@ -305,7 +299,7 @@
 
 #projects .card img {
     width: 100%;
-    height: 250px;  
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -356,5 +350,4 @@ form button {
 form button:hover {
     background: #0056b3;
 }
-
 </style>

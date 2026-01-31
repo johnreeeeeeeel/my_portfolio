@@ -30,7 +30,8 @@ import Footer from "./components/Footer.vue";
 }
 
 * {
-  font-family: "Jersey 15", sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
