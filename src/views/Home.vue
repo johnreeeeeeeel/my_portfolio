@@ -75,7 +75,18 @@
 
         <div id="contact">
             <h1>Contact</h1>
-            <p>This is contact section</p>
+            <form action="https://formsubmit.co/fc7edbabf57d93ec3a7604557c91ee6d" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
         </div>
 
     </div>
@@ -133,44 +144,6 @@
 #hero .intro-cont p span:last-child {
     color: #1E90FF;
 }
-
-#projects .row {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#projects .col {
-    flex: 1 1 calc(25% - 24px);
-    min-width: 250px;
-}
-
-#projects .card .card-header,
-#projects .card .card-body,
-#projects .card .card-footer {
-    border: none;
-    background-color: #f2f2f2;
-}
-
-#projects .card .card-header {
-    font-size: 18px;
-    text-align: center;
-    color: #1E8CF8;
-}
-
-#projects .card .card-footer {
-    text-align: center;
-    color: #555;
-}
-
-#projects .card img {
-    width: 100%;
-    height: 250px;  
-    object-fit: cover;
-    border-radius: 8px;
-}
-
 
 @keyframes typingH {
     from {
@@ -293,4 +266,95 @@
     transform: translateY(-5px);
     filter: drop-shadow(0 20px 20px rgba(30, 144, 255, 0.7));
 }
+
+#projects .row {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projects .col {
+    flex: 1 1 calc(25% - 24px);
+    min-width: 250px;
+}
+
+#projects .card {
+    background-color: transparent;
+    border: 2px solid #1E90FF;
+    border-radius: 12px;
+}
+
+#projects .card .card-header,
+#projects .card .card-body,
+#projects .card .card-footer {
+    border: none;
+    background-color: transparent;
+}
+
+#projects .card .card-header {
+    font-size: 18px;
+    text-align: center;
+    color: #1E8CF8;
+}
+
+#projects .card .card-footer {
+    text-align: center;
+    color: #f2f2f2;
+}
+
+#projects .card img {
+    width: 100%;
+    height: 250px;  
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+form {
+    max-width: 500px;
+}
+
+form label {
+    margin-bottom: 6px;
+    color: #f2f2f2;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: #1E90FF 2px solid;
+    border-radius: 12px;
+    outline: none;
+    background-color: transparent;
+    color: #f2f2f2;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
 </style>
