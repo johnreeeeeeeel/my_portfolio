@@ -91,9 +91,27 @@
             </div>
         </div>
 
-        <div id="about">
-            <h1 style="font-family: 'Changa One', sans-serif; margin-bottom: 8px;">About Me</h1>
-            <p>This is about section</p>
+        <div id="about" class="row g-0">
+            <div class="col">
+                <img src="../assets/hobby_skills.png" alt="profile">
+            </div>
+            <div class="col">
+                <h1 class="section-title">ABOUT ME</h1>
+                <p>Hello World!</p>
+                <h1 class="name">I'm Feby Johnrel R. Malbino</h1>
+                <p>A passionate BSIT student with a love for coding, design, and filmmaking. I enjoy capturing stunning visuals and turning them into stories. When I'm not coding or designing, you can find me in the street rinding my bicycle or in the court smashing shuttlecock. I'm always eager to learn new skills and take on exciting projects that challenge me to grow both personally and professionally.</p>
+
+                <div class="action-buttons">
+                    <a href="/src/assets/files/cv.pdf" download="Malbino_CV.pdf" class="btn secondary-btn">
+                        <Icon icon="mingcute:download-2-fill" />
+                        Download CV
+                    </a>
+                    <a href="/src/assets/files/resume.pdf" download="Malbino_Resume.pdf" class="btn secondary-btn">
+                        <Icon icon="mingcute:download-2-fill" />
+                        Download Resume
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div id="contact">
@@ -146,7 +164,7 @@
 
 #hero .intro-cont h1 {
     font-family: "Changa One", sans-serif;
-    font-size: clamp(64px, 6vw, 84px);
+    font-size: clamp(38px, 6vw, 84px);
     white-space: nowrap;
     overflow: hidden;
     margin-bottom: 18px;
@@ -154,7 +172,7 @@
 }
 
 #hero .intro-cont p {
-    font-size: clamp(16px, 4vw, 16px);
+    font-size: clamp(8px, 4vw, 16px);
     font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
@@ -177,7 +195,7 @@
     }
 
     to {
-        width: 40ch;
+        width: 38ch;
     }
 }
 
@@ -187,27 +205,30 @@
     margin-top: 12px;
 }
 
-#hero .intro-cont .action-buttons .btn {
+.btn {
     color: #f2f2f2;
     outline: none;
     border: none;
     padding: 8px 12px;
     border-radius: 12px;
+    display: flex;
+    align-items: center;    
+    gap: 6px;
+    font-size: 16px;
 }
 
-#hero .intro-cont .action-buttons .primary-btn {
+.primary-btn {
     background-color: #1E90FF;
 }
 
-#hero .intro-cont .action-buttons .primary-btn:hover {
+.primary-btn:hover {
     background-color: #1877d6;
 }
-
-#hero .intro-cont .action-buttons .secondary-btn {
+.secondary-btn {
     border: 2px solid #1E90FF;
 }
 
-#hero .intro-cont .action-buttons .secondary-btn.secondary-btn:hover {
+.secondary-btn.secondary-btn:hover {
     border: 2px solid #1E90FF;
     background-color: #1E90FF;
 }
@@ -303,6 +324,59 @@
     object-fit: cover;
     border-radius: 8px;
 }
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+#about .col {
+    flex: 1 1 300px; 
+}
+
+#about .col .section-title {
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(38px, 6vw, 84px);
+    margin-bottom: 18px;
+    color: #1E90FF;
+}
+
+#about .col:nth-child(2) .name {
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(12px, 6vw, 38px);
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+#about .col:nth-child(2) p {
+    text-align: justify;
+    font-size: clamp(8px, 4vw, 16px);
+    font-weight: 300;
+    overflow: hidden;
+}
+
+#about .col:nth-child(2) .action-buttons {
+    margin-top: 28px !important;
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#about img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    margin-top: 12px;
+}
+
 
 form {
     max-width: 500px;
