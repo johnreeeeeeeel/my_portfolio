@@ -1,6 +1,5 @@
 <template>
     <header>
-
         <nav>
             <div class="logo-container">
                 <a href="#home">
@@ -10,9 +9,11 @@
 
             <div class="links-container">
                 <a href="#hero">Home</a>
-                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="#contact">
+                    <button type="button" class="btn primary-btn">Contact</button>
+                </a>
             </div>
 
             <div class="dropdown links-dropdown">
@@ -21,13 +22,12 @@
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#hero">Home</a></li>
+                    <li><a class="dropdown-item" href="#projects">Projects</a></li>
                     <li><a class="dropdown-item" href="#about">About</a></li>
-                    <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
                     <li><a class="dropdown-item" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-
     </header>
 </template>
 
@@ -105,12 +105,47 @@ header .links-dropdown .btn {
 header .links-dropdown .dropdown-menu {
     padding: 8px;
     border-radius: 8px;
+    background-color: #191919;
 }
 
 header .links-dropdown .dropdown-menu a {
     font-family: "Changa One", sans-serif;
-    color: #242424;
+    color: #f2f2f2;
     text-decoration: none;
-    border-radius: 8px;
+    background-color: transparent;
+}
+
+header .links-dropdown .dropdown-menu a:hover {
+    color: #1E90FF;
+}
+
+.btn {
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.primary-btn {
+    background-color: #1E90FF;
+}
+
+.primary-btn:hover {
+    background-color: #1877d6;
+}
+
+.secondary-btn {
+    border: 2px solid #1E90FF;
+}
+
+.secondary-btn.secondary-btn:hover {
+    border: 2px solid #1E90FF;
+    background-color: #1E90FF;
 }
 </style>
