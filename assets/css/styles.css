@@ -1,0 +1,464 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #242424;
+  color: #f2f2f2;
+  padding: 60px 24px 0 24px;
+}
+
+a, p, span, strong, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+/* Header */
+
+header {
+    background-color: #191919;
+    color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 0 24px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    header .links-dropdown {
+        display: none !important;
+    }
+}
+
+/* Tablet + Mobile */
+@media (max-width: 1023px) {
+    header .links-container {
+        display: none !important;
+    }
+}
+
+header .logo-container img {
+    width: auto;
+    height: 48px;
+    cursor: pointer;
+}
+
+header .links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+}
+
+header .links-container a {
+    font-family: "Changa One", sans-serif;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+header .links-container a:hover {
+    color: #1E90FF;
+}
+
+header .links-dropdown .btn {
+    color: #f2f2f2;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+header .links-dropdown .dropdown-menu {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+header .links-dropdown .dropdown-menu a {
+    font-family: "Changa One", sans-serif;
+    color: #f2f2f2;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+header .links-dropdown .dropdown-menu a:hover {
+    color: #1E90FF;
+}
+
+/* Hero Section */
+
+#hero {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    box-sizing: border-box;
+}
+
+#hero .col:nth-child(1),
+#hero .col:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 300px;
+}
+
+#hero .col:nth-child(1) h1 {
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(38px, 6vw, 84px);
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 18px;
+    animation: typingH 3s steps(38, end) forwards, blink 0.75s step-end infinite;
+}
+
+#hero .col:nth-child(1) p {
+    font-size: clamp(8px, 4vw, 16px);
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typingP 3s steps(32, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typingH {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 12ch;
+    }
+}
+
+@keyframes typingP {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 38ch;
+    }
+}
+
+#hero .col:nth-child(1) .action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn {
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.primary-btn {
+    background-color: #1E90FF;
+}
+
+.primary-btn:hover {
+    background-color: #1877d6;
+}
+
+.secondary-btn {
+    border: 2px solid #1E90FF;
+}
+
+.secondary-btn.secondary-btn:hover {
+    border: 2px solid #1E90FF;
+    background-color: #1E90FF;
+}
+
+#hero .col:nth-child(1) .social-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 48px;
+}
+
+#hero .col:nth-child(1) .social-links a {
+    color: #1E90FF;
+}
+
+#hero .col:nth-child(1) .social-links a:hover {
+    color: #1877d6;
+}
+
+#hero .col:nth-child(2) img {
+    width: 690px;
+    height: auto;
+    filter: drop-shadow(0 10px 10px rgba(30, 144, 255, 0.5));
+    transition: filter 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+    #hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #hero .col:nth-child(2) {
+        display: none !important;
+    }
+
+    #hero .col:nth-child(1) {
+        align-items: center;
+    }
+}
+
+#hero .col:nth-child(2) img:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 20px 20px rgba(30, 144, 255, 0.7));
+}
+
+#projects {
+    min-height: 100vh;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#projects .section-title {
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(38px, 6vw, 84px);
+    margin-bottom: 18px;
+    color: #1E90FF;
+}
+
+#projects .row {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projects .col {
+    flex: 1 1 calc(25% - 24px);
+    min-width: 250px;
+}
+
+#projects .card {
+    background-color: transparent;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#projects .card:hover {
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.6);
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+}
+
+#projects .card .card-header,
+#projects .card .card-body,
+#projects .card .card-footer {
+    border: none;
+    background-color: transparent;
+}
+
+#projects .card .card-header {
+    font-size: 18px;
+    text-align: center;
+    color: #1E8CF8;
+}
+
+#projects .card .card-footer {
+    text-align: center;
+    color: #f2f2f2;
+}
+
+#projects .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#about {
+    min-height: 100vh;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    box-sizing: border-box;
+}
+
+#about .col {
+    flex: 1 1 300px;
+}
+
+#about .col .section-title {
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(38px, 6vw, 84px);
+    margin-bottom: 18px;
+    color: #1E90FF;
+}
+
+#about .col:nth-child(1) .name {
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(12px, 6vw, 38px);
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+#about .col:nth-child(1) p {
+    text-align: justify;
+    font-size: clamp(8px, 4vw, 16px);
+    font-weight: 300;
+    overflow: hidden;
+}
+
+#about .col:nth-child(1) .action-buttons {
+    margin-top: 28px !important;
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#about img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    margin-top: 12px;
+}
+
+#contact {
+    min-height: 100vh;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    box-sizing: border-box;
+}
+
+#contact .col:nth-child(1),
+#contact .col:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 300px;
+}
+
+#contact .col:nth-child(1) .section-title {
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(38px, 6vw, 84px);
+    color: #1E90FF;
+}
+
+#contact .col:nth-child(1) .social-links {
+    display: flex;
+    gap: 8px;
+}
+
+#contact .col:nth-child(1) .social-links a {
+    color: #1E90FF;
+}
+
+#contact .col:nth-child(1) .social-links a:hover {
+    color: #1877d6;
+}
+
+#contact .col:nth-child(2) form {
+    max-width: 450px;
+}
+
+#contact .col:nth-child(2) form label {
+    margin-bottom: 6px;
+    color: #f2f2f2;
+}
+
+#contact .col:nth-child(2) form input,
+#contact .col:nth-child(2) form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 2px solid #1877D6;
+    border-radius: 12px;
+    outline: none;
+    color: #f2f2f2;
+    background-color: transparent;
+}
+
+#contact .col:nth-child(2) form input:focus,
+#contact .col:nth-child(2) form textarea:focus {
+    border-color: #007bff;
+}
+
+#contact .col:nth-child(2) form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+#contact .col:nth-child(2) form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact .col:nth-child(2) form button:hover {
+    background: #0056b3;
+}
