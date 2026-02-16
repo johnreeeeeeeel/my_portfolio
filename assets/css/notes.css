@@ -126,11 +126,37 @@ a, p, span, strong, h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
-.notes .note h3 {
+.notes .note-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notes .note .note-header h3 {
     margin: 0;
     font-size: 1.5rem;
     height: 2rem;
     overflow: hidden;
+    color: #1E90FF;
+}
+
+.notes .note-header .dropdown .dropdown-menu {
+    padding: 0 12px;
+    background-color: #f2f2f2;
+}
+
+.notes .note-header .dropdown .dropdown-menu li a {
+    background-color: #f2f2f2;
+    outline: none;
+    border: none;
+    color: #191919;
+}
+
+.notes .note-header .dropdown .dropdown-menu li a:focus,
+.notes .note-header .dropdown .dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+    color: #191919;
 }
 
 .notes .note small {
@@ -154,3 +180,58 @@ a, p, span, strong, h1, h2, h3, h4, h5, h6 {
     hyphens: auto;                  
 }
 
+/* Edit Note Modal */
+
+/* Login Modal */
+
+.modal-content form .modal-header,
+.modal-content form .modal-body,
+.modal-content form .modal-footer {
+    border: none;
+    outline: none;
+    background-color: #191919;
+}
+
+.modal-content form .modal-dialog {
+    padding: 20px;
+}
+
+.modal-content form div input,
+.modal-content form div textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: #f2f2f2;
+    background-color: transparent;
+}
+
+.modal-content form div input:focus,
+.modal-content form div textarea:focus {
+    border: 1px solid #1E90FF;
+    outline: none;
+    background-color: transparent;
+    color: #f2f2f2;
+}
+
+.modal-content form div textarea {
+    min-height: 480px;
+    resize: none;
+}
+
+.modal-content form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content form button:hover {
+    background: #0056b3;
+}
