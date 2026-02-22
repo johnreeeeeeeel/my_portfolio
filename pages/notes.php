@@ -1,5 +1,6 @@
 <?php
     require '../config/db_connection.php';
+    require '../config/encryption.php';
 
     session_start();
 
@@ -126,13 +127,20 @@
                             $result = $stmt->get_result();
 
                             if ($result->num_rows > 0) {
-                                while ($note = $result->fetch_assoc()) {
+                               while ($note = $result->fetch_assoc()) {
+                                    $title = decrypt($note['title']);
+                                    $content = decrypt($note['content']);
                                     $date = date('M d, Y • h:i A', strtotime($note['created_at']));
                                     ?>
                                     <div class="note">
 
                                         <div class="note-header">
-                                            <h3 data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $note['id'] ?>" data-title="<?= htmlspecialchars($note['title'], ENT_QUOTES) ?>" data-content="<?= htmlspecialchars($note['content'], ENT_QUOTES) ?>"> <?= htmlspecialchars($note['title']) ?></h3>
+                                            <h3 data-bs-toggle="modal" data-bs-target="#editModal"
+                                                data-id="<?= $note['id'] ?>"
+                                                data-title="<?= htmlspecialchars($title, ENT_QUOTES) ?>"
+                                                data-content="<?= htmlspecialchars($content, ENT_QUOTES) ?>">
+                                                <?= htmlspecialchars($title) ?>
+                                            </h3>
                                             
                                             <div class="dropdown">
                                                 <button type="button" class="btn p-0" data-bs-toggle="dropdown" onclick="event.stopPropagation()">
@@ -149,8 +157,18 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <small data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $note['id'] ?>" data-title="<?= htmlspecialchars($note['title'], ENT_QUOTES) ?>" data-content="<?= htmlspecialchars($note['content'], ENT_QUOTES) ?>"> <?= $date ?></small>
-                                        <p data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $note['id'] ?>" data-title="<?= htmlspecialchars($note['title'], ENT_QUOTES) ?>" data-content="<?= htmlspecialchars($note['content'], ENT_QUOTES) ?>"> <?= nl2br(htmlspecialchars($note['content'])) ?></p>
+                                        <small data-bs-toggle="modal" data-bs-target="#editModal"
+                                            data-id="<?= $note['id'] ?>"
+                                            data-title="<?= htmlspecialchars($title, ENT_QUOTES) ?>"
+                                            data-content="<?= htmlspecialchars($content, ENT_QUOTES) ?>">
+                                            <?= $date ?>
+                                        </small>
+                                        <p data-bs-toggle="modal" data-bs-target="#editModal"
+                                            data-id="<?= $note['id'] ?>"
+                                            data-title="<?= htmlspecialchars($title, ENT_QUOTES) ?>"
+                                            data-content="<?= htmlspecialchars($content, ENT_QUOTES) ?>">
+                                            <?= nl2br(htmlspecialchars($content)) ?>
+                                        </p>
                                     </div>
                                     <?php
                                 }

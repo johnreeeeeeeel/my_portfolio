@@ -1,27 +1,3 @@
- <?php
-    session_start();
-    require 'config/db_connection.php';
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        $query = "SELECT * FROM users 
-                    WHERE username='$username' 
-                    AND password='$password'";
-
-        $result = mysqli_query($conn, $query);
-
-        if (mysqli_num_rows($result) == 1) {
-            $_SESSION['username'] = $username;
-            header('Location: pages/private_space.php');
-            exit();
-        } else {
-            $error = 'Invalid username or password!';
-        }
-    }
-?>
-
 <html lang="en">
 
 <head>
@@ -61,8 +37,8 @@
                     <a href="#projects">Projects</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
-                    <a>
-                        <button type="button" class="btn primary-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Private Space</button>
+                    <a href="pages/login.php" class="btn primary-btn">
+                        NotePad
                     </a>
                 </div>
 
@@ -76,7 +52,7 @@
                         <li><a class="dropdown-item" href="#projects">Projects</a></li>
                         <li><a class="dropdown-item" href="#about">About</a></li>
                         <li><a class="dropdown-item" href="#contact">Contact</a></li>
-                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Private Space</a></li>
+                        <li><a class="dropdown-item" href="pages/login.php">NotePad</a></li>
                     </ul>
                 </div>
             </nav>
@@ -235,36 +211,6 @@
                         Send Message
                     </button>
                 </form>
-            </div>
-        </div>
-
-        <!-- Login Modal -->
-
-        <div class="modal fade" id="loginModal">
-            <div class="modal-dialog modal-dialog-centered modal-md">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h2 class="modal-title">Login</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-
-                    <div class="modal-body">
-                        <?php if (isset($error)) echo "<p class='text-danger'>$error</p>"; ?>
-
-                        <form method="POST">
-                            <label for="name">Username:</label>
-                            <input type="text" id="username" name="username" required>
-
-                            <label for="email">Password:</label>
-                            <input type="password" id="password" name="password" required>
-
-                            <button type="submit" name="send" class="btn">
-                                Login
-                            </button>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

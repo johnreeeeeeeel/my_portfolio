@@ -25,6 +25,12 @@ html, body {
   padding: 60px 24px 0 24px;
 }
 
+@media (max-width: 767px) {
+    html, body {
+        padding: 60px 12px 0 12px;
+    }
+}
+
 a, p, span, strong, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -344,63 +350,5 @@ a, p, span, strong, h1, h2, h3, h4, h5, h6 {
 }
 
 #contact .col:nth-child(2) form button:hover {
-    background: #0056b3;
-}
-
-/* Login Modal */
-
-.modal-header,
-.modal-body {
-    border: none;
-    outline: none;
-    background-color: #191919;
-}
-
-.modal-dialog {
-    padding: 20px;
-}
-
-.modal-header .modal-title {
-    font-family: "Changa One", sans-serif;
-    color: #1E90FF;
-}
-
-.modal-header .btn-close {
-    background-color: #1E90FF;
-}
-
-.modal-body form label {
-    margin-bottom: 6px;
-    color: #f2f2f2;
-}
-
-.modal-body form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 2px solid #1877D6;
-    border-radius: 12px;
-    outline: none;
-    color: #f2f2f2;
-    background-color: transparent;
-}
-
-.modal-body form input:focus {
-    border-color: #007bff;
-}
-
-.modal-body form button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    background: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.modal-body form button:hover {
     background: #0056b3;
 }
