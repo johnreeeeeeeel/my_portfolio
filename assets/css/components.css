@@ -9,6 +9,7 @@
     justify-content: center;
     gap: 6px;
     font-size: 16px;
+    font-weight: 300;
 }
 
 .primary-btn {
@@ -34,12 +35,13 @@
 
 .transparent-btn {
     border: 2px solid transparent;
+    color: var(--bs-body-color);
 }
 
 .transparent-btn:hover,
 .transparent-btn:active {
-    border: 2px solid #1E90FF !important;
-    background-color: #1E90FF !important;
+    border: 2px solid transparent !important;
+    background-color: transparent !important;
 }
 
 .danger-btn {
