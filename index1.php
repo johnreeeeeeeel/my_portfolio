@@ -189,10 +189,7 @@
                 </div>
 
                 <div class="featured">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto, recusandae cum aliquid fuga culpa voluptate vel fugit sapiente ut distinctio provident illum aut quisquam porro placeat maxime? Sunt, ut.</h1>
-                    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia delectus dolorum voluptatem cupiditate dolor, exercitationem sit rem ratione commodi, quos repudiandae sunt consequatur architecto sapiente. Libero doloremque illo fuga maxime!</h1>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod laborum, qui iusto eos nesciunt est placeat! Eaque temporibus voluptate at sapiente nisi vitae itaque, mollitia dicta dolore eligendi placeat.</h1>
-                    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus architecto aut itaque molestiae provident perferendis quam eaque quisquam dolores. Sint commodi eveniet possimus ad sit enim, dolore delectus amet corporis.</h1>
+                    
                 </div>
             </div>
 
@@ -278,7 +275,127 @@
             </div>
 
             <div class="tab-pane" id="about">
-                
+                <h1>
+                    <i class="fa-solid fa-user"></i>
+                    About Me
+                </h1>
+
+                <div class="intro">
+                    <div>
+                        <img src="assets/images/profile.png" alt="profile picture" class="img-fluid">
+                    </div>
+
+                    <div>
+                        <h3>Hello World!</h3>
+                        <h1>I'm Feby Johnrel R. Malbino</h1>
+                        <small>A student taking up a Bachelor of Science in Information Technology at Davao del Norte State College.</small>
+                        <small>A future Web Developer and UI/UX Designer.</small>
+                        <small>I'm focused on user-centered design principles.</small>
+                        <small>I approach problems by breaking them down into smaller parts to solve them more efficiently.</small>
+                        <br>
+                        <small>Skills in Microsoft Office applications, Adobe Creative Suite, photography, videography, photo and video editing.</small>
+                        <small>Passionate in terms of writing and directing short films.</small>
+                        <br>
+                        <div class="add-info">
+                            <small>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Carmen, Davao del Norte, Philippines
+                            </small>
+                            <small>
+                                <i class="fa-solid fa-phone"></i>
+                                09207010059
+                            </small>
+                            <small>
+                                <i class="fa-solid fa-envelope"></i>
+                                techjohnrel@gmail.com
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <div class="track">
+                        <!-- original -->
+                        <div class="item">
+                            <img src="assets\images\techstack\html.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\css.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\js.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\php.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\java.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\mysql.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\bootstrap.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\git.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\github.png" alt="reload">
+                        </div>
+
+                        <!-- duplicate -->
+                         <div class="item">
+                            <img src="assets\images\techstack\html.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\css.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\js.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\php.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\java.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\mysql.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\bootstrap.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\git.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\github.png" alt="reload">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hobby">
+                    <div>
+                        <h1>Photography & Videogeraphy</h1>
+                        <small>Besides coding and designing, I also enjoy capturing photos and videos of random subjects, from everyday objects to landscapes.</small>
+                    </div>
+
+                    <div>
+                        <img src="assets/images/other/photography.png" alt="profile picture" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="hobby">
+                    <div>
+                        <h1>Sport</h1>
+                        <small>Besides coding and designing, I enjoy staying active through sports such as cycling and other outdoor activities, which help me stay energized and creative.</small>
+                    </div>
+
+                    <div>
+                        <img src="assets/images/other/cycling.jpg" alt="profile picture" class="img-fluid">
+                    </div>
+                </div>
             </div>
 
             <div class="tab-pane" id="contact">
