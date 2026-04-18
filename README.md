@@ -1,8 +1,9 @@
-Feby Johnrel Malbino's Portfolio
-
 Changelogs
+v2...
+Redesign All Part of The Website
+
 v1.1...
-Rework To Native, No Framework Used
+Rework From Vue Framework To Native
 
 v1.0...
-Used Vue Framework
+Use Vue Framework as Test
