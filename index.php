@@ -15,205 +15,431 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Links -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/header.css">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
-<body>
-    <div class="container-fluid">
-        <header>
-            <nav>
-                <div class="logo-container">
-                    <a href="#home">
-                        <img src="assets/images/logo-dark.png" alt="logo">
-                    </a>
-                </div>
+<body class="container-fluid">
+    <div class="menuToggleButtonContainer">   
+        <i class="fa-solid fa-bars menuToggleButton" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile"></i>
+    </div>
 
-                <div class="links-container">
-                    <a href="#hero">Home</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                    <a href="pages/login.php" class="btn primary-btn">
-                        NotePad
-                    </a>
-                </div>
-
-                <div class="dropdown links-dropdown">
-                    <button type="button" class="btn" data-bs-toggle="dropdown">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#fff" d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z"/></g></svg>
-                    </button>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#hero">Home</a></li>
-                        <li><a class="dropdown-item" href="#projects">Projects</a></li>
-                        <li><a class="dropdown-item" href="#about">About</a></li>
-                        <li><a class="dropdown-item" href="#contact">Contact</a></li>
-                        <li><a class="dropdown-item" href="pages/login.php">NotePad</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <div id="hero" class="row">
-            <div class="col">
-                <h1>Hi I am Johnrel</h1>
-
-                <div style="margin-bottom: 18px; text-align: center;">
-                    <p>I'm a BSIT student, still learning and improving my skills.</p>
-                    <p>I'm passionate about creating and designing.</p>
-                    <p>Beside coding, I also enjoy film making.</p>
-                </div>
-
-                <div class="action-buttons">
-                    <a href="#about" class="btn primary-btn">About Me</a>
-                    <a href="#projects" class="btn transparent-btn">
-                        My Projects
-                        <Icon icon="mingcute:right-line" />
-                    </a>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://github.com/johnreeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M7.024 2.31a9 9 0 0 1 2.125 1.046A11.4 11.4 0 0 1 12 3c.993 0 1.951.124 2.849.355a9 9 0 0 1 2.124-1.045c.697-.237 1.69-.621 2.28.032c.4.444.5 1.188.571 1.756c.08.634.099 1.46-.111 2.28C20.516 7.415 21 8.652 21 10c0 2.042-1.106 3.815-2.743 5.043a9.5 9.5 0 0 1-2.59 1.356c.214.49.333 1.032.333 1.601v3a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-.991c-.955.117-1.756.013-2.437-.276c-.712-.302-1.208-.77-1.581-1.218c-.354-.424-.74-1.38-1.298-1.566a1 1 0 0 1 .632-1.898c.666.222 1.1.702 1.397 1.088c.48.62.87 1.43 1.63 1.753c.313.133.772.22 1.49.122L8 17.98a4 4 0 0 1 .333-1.581a9.5 9.5 0 0 1-2.59-1.356C4.106 13.815 3 12.043 3 10c0-1.346.483-2.582 1.284-3.618c-.21-.82-.192-1.648-.112-2.283l.005-.038c.073-.582.158-1.267.566-1.719c.59-.653 1.584-.268 2.28-.031Z"/></g></svg>
-                    </a>
-                    <a href="https://www.facebook.com/f.johnreeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M13.5 21.888C18.311 21.164 22 17.013 22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.013 3.689 9.165 8.5 9.888V15H9a1.5 1.5 0 0 1 0-3h1.5v-2A3.5 3.5 0 0 1 14 6.5h.5a1.5 1.5 0 0 1 0 3H14a.5.5 0 0 0-.5.5v2H15a1.5 1.5 0 0 1 0 3h-1.5z"/></g></svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@johnreeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M14 2a2 2 0 0 1 2 2a3.004 3.004 0 0 0 2.398 2.94a2 2 0 0 1-.796 3.92A7 7 0 0 1 16 10.325V16a6 6 0 1 1-7.499-5.81a2 2 0 0 1 .998 3.873A2.002 2.002 0 0 0 10 18a2 2 0 0 0 2-2V4a2 2 0 0 1 2-2"/></g></svg>
-                    </a>
-                    <a href="https://www.instagram.com/john.reeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M16 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm0 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m-4 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4m4.5-3.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2"/></g></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col">
-                <img src="assets/images/profile.png" alt="profile">
-            </div>
+    <!-- Mobile Sidebar -->
+    <div class="offcanvas offcanvas-start" id="sidebarMobile">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
 
-        <div id="projects">
-            <h1 class="section-title">MY PROJECTS</h1>
+        <div class="offcanvas-body">
+            <img class="profile-img" src="assets/images/profile/profile.png" alt="Profile Image">
 
-            <div class="row g-0">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">DNSC Findr (Final)</div>
-                        <div class="card-body">
-                            <img src="assets/images/projects/DNSCFNDR.png" alt="Reload">
-                        </div>
-                        <div class="card-footer">
-                            A web-based application that helps students find their lost items.
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">DNSC Findr (UI)</div>
-                        <div class="card-body">
-                            <img src="assets/images/projects/DNSCFNDR.png" alt="Reload">
-                        </div>
-                        <div class="card-footer">
-                            A web-based application that helps students find their lost items.
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">Online Paluwagan System</div>
-                        <div class="card-body">
-                            <img src="assets/images/projects/OPS.png" alt="Reload">
-                        </div>
-                        <div class="card-footer">
-                            A desktop-based application that helps manage paluwagan transactions.
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">Simple Ordering System</div>
-                        <div class="card-body">
-                            <img src="assets/images/projects/SOS.png" alt="Reload">
-                        </div>
-                        <div class="card-footer">
-                            A web-based application that helps manage orders in a restaurant.
-                        </div>
-                    </div>
-                </div>
+            <div class="profile-info">
+                <h5>Feby Johnrel R. Malbino</h5>
+                <small>Web Developer & Designer</small>
             </div>
+
+            <div class="action-buttons">
+                <a href="assets/files/resume.jpg" download="febyjohnrelmalbino_resume.jpg" class="btn primary-btn">
+                    <i class="fa-solid fa-download" style="color: rgb(255, 255, 255);"></i>
+                    Resume
+                </a>
+                <a href="assets/files/cv.jpg" download="febyjohnrelmalbino_cv.jpg" class="btn primary-btn">
+                    <i class="fa-solid fa-download" style="color: rgb(255, 255, 255);"></i>
+                    CV
+                </a>
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#home">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#projects">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#about">
+                        <i class="fa-solid fa-user"></i>
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Desktop Sidebar -->
+    <div id="sidebarDesktop">
+        <img class="profile-img" src="assets/images/profile/profile.png" alt="Profile Image">
+
+        <div class="profile-info">
+            <h5>Feby Johnrel R. Malbino</h5>
+            <small>Web Developer & Designer</small>
         </div>
 
-        <div id="about" class="row g-0">
-            <div class="col">
-                <h1 class="section-title">ABOUT ME</h1>
-                <p>Hello World!</p>
-                <h1 class="name">I'm Feby Johnrel R. Malbino</h1>
-                <p>A passionate BSIT student with a love for coding, design, and filmmaking. I enjoy capturing stunning
-                    visuals and turning them into stories. When I'm not coding or designing, you can find me in the
-                    street rinding my bicycle or in the court smashing shuttlecock. I'm always eager to learn new skills
-                    and take on exciting projects that challenge me to grow both personally and professionally.</p>
-
-                <div class="action-buttons">
-                    <a href="assets/files/cv.jpg" download="Malbino_CV.jpg" class="btn secondary-btn">
-                        <Icon icon="mingcute:download-2-fill" />
-                        Download CV
-                    </a>
-                    <a href="assets/files/resume.jpg" download="Malbino_Resume.jpg" class="btn secondary-btn">
-                        <Icon icon="mingcute:download-2-fill" />
-                        Download Resume
-                    </a>
-                </div>
-            </div>
-
-            <div class="col">
-                <img src="assets/images/hobby_skills.png" alt="profile">
-            </div>
+        <div class="action-buttons">
+            <a href="assets/files/resume.jpg" download="febyjohnrelmalbino_resume.jpg" class="btn primary-btn">
+                <i class="fa-solid fa-download" style="color: rgb(255, 255, 255);"></i>
+                Resume
+            </a>
+            <a href="assets/files/cv.jpg" download="febyjohnrelmalbino_cv.jpg" class="btn primary-btn">
+                <i class="fa-solid fa-download" style="color: rgb(255, 255, 255);"></i>
+                CV
+            </a>
         </div>
 
-        <div id="contact" class="row">
-            <div class="col">
-                <h1 class="section-title">CONTACT ME</h1>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#projects">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Projects
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#about">
+                    <i class="fa-solid fa-user"></i>
+                    About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contact
+                </a>
+            </li>
+        </ul>
 
-                <div class="social-links">
-                    <a href="https://github.com/johnreeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M7.024 2.31a9 9 0 0 1 2.125 1.046A11.4 11.4 0 0 1 12 3c.993 0 1.951.124 2.849.355a9 9 0 0 1 2.124-1.045c.697-.237 1.69-.621 2.28.032c.4.444.5 1.188.571 1.756c.08.634.099 1.46-.111 2.28C20.516 7.415 21 8.652 21 10c0 2.042-1.106 3.815-2.743 5.043a9.5 9.5 0 0 1-2.59 1.356c.214.49.333 1.032.333 1.601v3a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-.991c-.955.117-1.756.013-2.437-.276c-.712-.302-1.208-.77-1.581-1.218c-.354-.424-.74-1.38-1.298-1.566a1 1 0 0 1 .632-1.898c.666.222 1.1.702 1.397 1.088c.48.62.87 1.43 1.63 1.753c.313.133.772.22 1.49.122L8 17.98a4 4 0 0 1 .333-1.581a9.5 9.5 0 0 1-2.59-1.356C4.106 13.815 3 12.043 3 10c0-1.346.483-2.582 1.284-3.618c-.21-.82-.192-1.648-.112-2.283l.005-.038c.073-.582.158-1.267.566-1.719c.59-.653 1.584-.268 2.28-.031Z"/></g></svg>
-                    </a>
-                    <a href="https://www.facebook.com/f.johnreeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M13.5 21.888C18.311 21.164 22 17.013 22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.013 3.689 9.165 8.5 9.888V15H9a1.5 1.5 0 0 1 0-3h1.5v-2A3.5 3.5 0 0 1 14 6.5h.5a1.5 1.5 0 0 1 0 3H14a.5.5 0 0 0-.5.5v2H15a1.5 1.5 0 0 1 0 3h-1.5z"/></g></svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@johnreeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M14 2a2 2 0 0 1 2 2a3.004 3.004 0 0 0 2.398 2.94a2 2 0 0 1-.796 3.92A7 7 0 0 1 16 10.325V16a6 6 0 1 1-7.499-5.81a2 2 0 0 1 .998 3.873A2.002 2.002 0 0 0 10 18a2 2 0 0 0 2-2V4a2 2 0 0 1 2-2"/></g></svg>
-                    </a>
-                    <a href="https://www.instagram.com/john.reeeeeeeel" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#1877D6" d="M16 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm0 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m-4 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4m4.5-3.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2"/></g></svg>
-                    </a>
+        <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+    </div>
+
+    <section id="section">
+        <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <?php
+                    date_default_timezone_set('Asia/Manila');
+
+                    $hour = date('H');
+
+                    if ($hour < 12) {
+                        $bg = "assets/images/other/morning.png";
+                        $greet = "Good Morning!";
+                    } elseif ($hour < 18) {
+                        $bg = "assets/images/other/afternoon.png";
+                        $greet = "Good Afternoon!";
+                    } else {
+                        $bg = "assets/images/other/night.png";
+                        $greet = "Good Evening!";
+                    }
+                ?>
+
+                <div class="header" style="background: url('<?php echo $bg; ?>') center/cover;">
+                    <small><?php echo date('F j, Y'); ?></small>
+                    <h1><?php echo $greet; ?></h1>
+                </div>
+
+                <div class="hero">
+                    <h1>Hi I am Feby Johnrel </h1>
+
+                    <div class="description">
+                        <p>I'm a BSIT student, still learning and improving my skills.</p>
+                        <p>I'm passionate about creating and designing.</p>
+                        <p>Beside coding, I also enjoy film making.</p>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/johnreeeeeeeel" target="_blank">
+                            <i class="fa-brands fa-github fa-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/f.johnreeeeeeeel" target="_blank">
+                            <i class="fa-brands fa-facebook fa-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/john.reeeeeeeel" target="_blank">
+                            <i class="fa-brands fa-instagram fa-2xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@johnreeeeeeeel" target="_blank">
+                            <i class="fa-brands fa-tiktok fa-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="featured">
+                    
                 </div>
             </div>
 
-            <div class="col">
+            <div class="tab-pane" id="projects">
+                <h1>
+                    <i class="fa-solid fa-briefcase"></i>
+                    My Projects
+                </h1>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <!-- DNSC Findr -->
+                        <div class="card project-card" tabindex="0" 
+                            data-title="DNSC Findr" 
+                            data-img="assets/images/projects/DNSCFNDR.png" 
+                            data-desc="The system’s purpose of our project is to make lost and found digitalized, helps Dnscians to report found item and retrieve lost item quickly, reduce stress, and keep the campus organized. The system’s main features like secure login, report item, claim item, schedule appointments, messaging and notification. This will give Dnscians a safe and easy way to manage lost and found items." 
+                            data-github="https://github.com/johnreeeeeeeel/DNSC_Findr_Final.git">
+                            <div class="card-header">
+                                <p class="card-title"></p>
+                            </div>
+
+                            <div class="card-body">
+                                <img class="card-img" alt="Project Image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card project-card" tabindex="0" 
+                            data-title="Simple Ordering System" 
+                            data-img="assets/images/projects/SOS.png" 
+                            data-desc="This is simple Kiosk where in Customers can easily place order in &quot;Hour Burger&quot;"
+                            data-github="https://github.com/johnreeeeeeeel/Simple-Ordering-System-With-UI.git">
+                            <div class="card-header">
+                                <p class="card-title"></p>
+                            </div>
+
+                            <div class="card-body">
+                                <img class="card-img" alt="Project Image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card project-card" tabindex="0" 
+                            data-title="Online Paluwagan System" 
+                            data-img="assets/images/projects/OPS.png" 
+                            data-desc="The Online Paluwagan System is designed to automate and manage the activities of a Paluwagan. This system automates the management of member contributions, schedules of payment, and payouts, allowing group handlers and members to better track financial transactions and reduce the risks associated with manual record-keeping."
+                            data-github="https://github.com/johnreeeeeeeel/Online_Paluwagan_System.git">
+                            <div class="card-header">
+                                <p class="card-title"></p>
+                            </div>
+
+                            <div class="card-body">
+                                <img class="card-img" alt="Project Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="projectModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modalTitle"></h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <img id="modalImg" class="img-fluid" />
+                                <p id="modalDesc"></p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <a id="modalGithub" href="" target="_blank" class="btn primary-btn">
+                                    View on GitHub
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="about">
+                <h1>
+                    <i class="fa-solid fa-user"></i>
+                    About Me
+                </h1>
+
+                <div class="intro">
+                    <div>
+                        <img src="assets/images/profile/profile.png" alt="profile picture" class="img-fluid">
+                    </div>
+
+                    <div>
+                        <h3>Hello World!</h3>
+                        <h1>I'm Feby Johnrel R. Malbino</h1>
+                        <small>A student taking up a Bachelor of Science in Information Technology at Davao del Norte State College.</small>
+                        <small>A future Web Developer and UI/UX Designer.</small>
+                        <small>I'm focused on user-centered design principles.</small>
+                        <small>I approach problems by breaking them down into smaller parts to solve them more efficiently.</small>
+                        <br>
+                        <small>Skills in Microsoft Office applications, Adobe Creative Suite, photography, videography, photo and video editing.</small>
+                        <small>Passionate in terms of writing and directing short films.</small>
+                        <br>
+                        <div class="add-info">
+                            <small>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Carmen, Davao del Norte, Philippines
+                            </small>
+                            <small>
+                                <i class="fa-solid fa-phone"></i>
+                                09207010059
+                            </small>
+                            <small>
+                                <i class="fa-solid fa-envelope"></i>
+                                techjohnrel@gmail.com
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <div class="track">
+                        <!-- original -->
+                        <div class="item">
+                            <img src="assets\images\techstack\html.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\css.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\js.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\php.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\java.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\mysql.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\bootstrap.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\git.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\github.png" alt="reload">
+                        </div>
+
+                        <!-- duplicate -->
+                         <div class="item">
+                            <img src="assets\images\techstack\html.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\css.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\js.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\php.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\java.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\mysql.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\bootstrap.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\git.png" alt="reload">
+                        </div>
+                        <div class="item">
+                            <img src="assets\images\techstack\github.png" alt="reload">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hobby">
+                    <div>
+                        <h1>Photography & Videogeraphy</h1>
+                        <small>Besides coding and designing, I also enjoy capturing photos and videos of random subjects, from everyday objects to landscapes.</small>
+                    </div>
+
+                    <div>
+                        <img src="assets/images/other/photography.png" alt="reload" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="hobby">
+                    <div>
+                        <h1>Sport</h1>
+                        <small>Besides coding and designing, I enjoy staying active through sports such as cycling and other outdoor activities, which help me stay energized and creative.</small>
+                    </div>
+
+                    <div>
+                        <img src="assets/images/other/cycling.jpg" alt="reload" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="contact">
                 <form action="config/contact.php" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <h1>
+                        <i class="fa-solid fa-envelope"></i>
+                        Get In Touch
+                    </h1>
+                    <small>I'd love to hear from you!</small>
+                    <small>Fill out the form below and I'll get back to you as soon as possible.</small>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input placeholder="Your Name" type="text" id="name" name="name" required>
+                    <input placeholder="Your Email" type="email" id="email" name="email" required>
+                    <textarea placeholder="Your Message" id="message" name="message" required></textarea>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button type="submit" name="send" class="btn">
-                        <Icon icon="mingcute:send-fill" />
+                    <button type="submit" name="send" class="btn primary-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
                         Send Message
                     </button>
                 </form>
+
+                <div class="social-links">
+                    <a href="https://github.com/johnreeeeeeeel" target="_blank">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/f.johnreeeeeeeel" target="_blank">
+                        <i class="fa-brands fa-facebook fa-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/john.reeeeeeeel" target="_blank">
+                        <i class="fa-brands fa-instagram fa-2xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@johnreeeeeeeel" target="_blank">
+                        <i class="fa-brands fa-tiktok fa-2xl"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </body>
+
+<!-- JS -->
+<script src="assets/js/scripts.js"></script>
 
 </html>

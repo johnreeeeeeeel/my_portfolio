@@ -1,47 +1,110 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+<html lang="en">
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-if (isset($_POST['send'])) {
+    <title>F. Johnrel - Portfolio</title>
 
-    $name    = htmlspecialchars($_POST['name']);
-    $email   = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    $mail = new PHPMailer(true);
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    try {
-        // SMTP settings
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'techjohnrel@gmail.com';      // YOUR GMAIL
-        $mail->Password   = 'bpagefdybudxqdhd';        // APP PASSWORD
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
-        // Email settings
-        $mail->setFrom('febyjohnrel11@gmail.com', 'Contact Form');
-        $mail->addAddress('techjohnrel@gmail.com'); // where emails go
-        $mail->addReplyTo($email, $name);
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/contact_message.css">
 
-        $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Message';
-        $mail->Body    = "
-            <h3>New Message</h3>
-            <p><b>Name:</b> $name</p>
-            <p><b>Email:</b> $email</p>
-            <p><b>Message:</b><br>$message</p>
-        ";
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
 
-        $mail->send();
-        echo "Message sent successfully!";
-    } catch (Exception $e) {
-        echo "Message failed. Error: {$mail->ErrorInfo}";
+<body>
+    <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/SMTP.php';
+
+    if (isset($_POST['send'])) {
+
+        $name    = htmlspecialchars($_POST['name']);
+        $email   = htmlspecialchars($_POST['email']);
+        $message = htmlspecialchars($_POST['message']);
+
+        $mail = new PHPMailer(true);
+
+        try {
+            // SMTP settings
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'techjohnrel@gmail.com';
+            $mail->Password   = 'bpagefdybudxqdhd';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+
+            // Email settings
+            $mail->setFrom('febyjohnrel11@gmail.com', 'Contact Form');
+            $mail->addAddress('techjohnrel@gmail.com');
+            $mail->addReplyTo($email, $name);
+
+            $mail->isHTML(true);
+            $mail->Subject = 'New Contact Form Message';
+            $mail->Body    = "
+                <h3>New Message</h3>
+                <p><b>Name:</b> $name</p>
+                <p><b>Email:</b> $email</p>
+                <p><b>Message:</b><br>$message</p>
+            ";
+
+            $mail->send();
+
+            echo '
+                <div class="message success-message">
+                    <h1>
+                        <i class="fas fa-check-circle"></i>
+                        Message Sent!
+                    </h1>
+                    <small>
+                        Thank you for reaching out. I will get back to you as soon as possible.
+                    </small>
+
+                    <button onclick="goBackAndReload()" class="btn primary-btn">Go Back</button>
+                </div>
+            ';
+            
+        } catch (Exception $e) {
+
+            echo '
+                <div class="message error-message">
+                    <h1>
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Message Not Sent!
+                    </h1>
+                    <small>
+                        An error occurred while trying to send your message. Please try again.
+                    </small>
+
+                    <button onclick="goBackAndReload()" class="btn primary-btn">Go Back</button>
+                </div>
+            ';
+        }
     }
-}
-?>
+    ?>
+</body>
+
+<!-- JS -->
+<script src="../assets/js/scripts.js"></script>
+
+</html>

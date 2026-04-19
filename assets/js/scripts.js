@@ -55,3 +55,18 @@ document.querySelectorAll(".project-card").forEach(card => {
 document.getElementById("projectModal").addEventListener("hide.bs.modal", () => {
     document.activeElement.blur();
 });
+
+// Go back to the previous page and reload it
+function goBackAndReload() {
+    window.history.back();
+
+    setTimeout(() => {
+        window.location.reload();
+    }, 200);
+}
+
+window.addEventListener("pageshow", function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+        window.location.reload();
+    }
+});
