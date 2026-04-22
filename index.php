@@ -141,8 +141,10 @@
         </button>
     </div>
 
+    
     <section id="section">
         <div class="tab-content">
+            <!--Home Section-->
             <div class="tab-pane active" id="home">
                 <?php
                     date_default_timezone_set('Asia/Manila');
