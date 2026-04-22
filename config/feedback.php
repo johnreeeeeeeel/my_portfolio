@@ -41,7 +41,7 @@
 
         $name    = htmlspecialchars($_POST['name']);
         $email   = htmlspecialchars($_POST['email']);
-        $message = htmlspecialchars($_POST['message']);
+        $feedback = htmlspecialchars($_POST['feedback']);
 
         $mail = new PHPMailer(true);
 
@@ -61,14 +61,14 @@
             $mail->addReplyTo($email, $name);
 
             $mail->isHTML(true);
-            $mail->Subject = '[Portfolio] New Contact Message';
+            $mail->Subject = '[Portfolio] New Feedback Message';
 
             $mail->Body    = "
                 <div class='email-content'>
-                    <h1>Message</h1>
+                    <h1>Feedback</h1>
                     <p><strong>Name:</strong> {$name}</p>
                     <p><strong>Email:</strong> {$email}</p>
-                    <p><strong>Message:</strong><br>{$message}</p>
+                    <p><strong>Feedback:</strong><br>{$feedback}</p>
                 </div>
             ";
 
@@ -78,10 +78,10 @@
                 <div class="message success-message">
                     <h1>
                         <i class="fas fa-check-circle"></i>
-                        Message Sent!
+                        Feedback Sent!
                     </h1>
                     <small>
-                        Thank you for reaching out. I will get back to you as soon as possible.
+                        Thank you for your feedback. I will get back to you as soon as possible.
                     </small>
 
                     <button onclick="goBackAndReload()" class="btn primary-btn">Go Back</button>
@@ -94,10 +94,10 @@
                 <div class="message error-message">
                     <h1>
                         <i class="fas fa-exclamation-triangle"></i>
-                        Message Not Sent!
+                        Feedback Not Sent!
                     </h1>
                     <small>
-                        An error occurred while trying to send your message. Please try again.
+                        An error occurred while trying to send your feedback. Please try again.
                     </small>
 
                     <button onclick="goBackAndReload()" class="btn primary-btn">Go Back</button>

@@ -35,3 +35,18 @@
     font-weight: 300;
     text-align: center;
 }
+
+.email-content {
+    background-color: #1E90FF !important;
+}
+
+.email-content h1 {
+    text-transform: uppercase;
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(18px, 6vw, 38px);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0; 
+    text-align: left;
+}

@@ -83,9 +83,15 @@
                 </li>
             </ul>
 
-            <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
-                <i class="fa-solid fa-circle-half-stroke"></i>
-            </button>
+            <div class="other-buttons">
+                <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+
+                <button id="feedbackToggle" class="btn primary-btn" disabled>
+                    <i class="fa-solid fa-comment"></i>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -136,9 +142,40 @@
             </li>
         </ul>
 
-        <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
-            <i class="fa-solid fa-circle-half-stroke"></i>
-        </button>
+        <div class="other-buttons">
+            <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+
+            <button id="feedbackToggle" class="btn primary-btn" data-bs-toggle="modal" data-bs-target="#feedbackModalDesktop">
+                <i class="fa-solid fa-comment"></i>
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="feedbackModalDesktop">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Give Feedback</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="config/feedback.php" method="POST">
+                            <input placeholder="Your Name" type="text" id="name" name="name">
+                            <input placeholder="Your Email" type="email" id="email" name="email">
+                            <textarea placeholder="Your Feedback" id="feedback" name="feedback" required></textarea>
+
+                            <button type="submit" name="send" class="btn primary-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Send Feedback
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <section id="section">
