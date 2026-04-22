@@ -140,7 +140,6 @@
             <i class="fa-solid fa-circle-half-stroke"></i>
         </button>
     </div>
-
     
     <section id="section">
         <div class="tab-content">
