@@ -1,5 +1,0 @@
-Future Improvement
-- Feedback Form
-- Chatbot
-- Micro School Activities
-	- Add insert form to automatically insert in section.

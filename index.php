@@ -239,79 +239,70 @@
                     <i class="fa-solid fa-briefcase"></i>
                     My Projects
                 </h1>
+
                 <div class="row g-3">
+
+                    <?php
+                    require 'config/db_connection.php';
+
+                    $result = $conn->query("CALL getProjects()");
+                    ?>
+
+                    <?php while ($row = $result->fetch_assoc()) { ?>
+
+                    <!-- Card -->
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <!-- DNSC Findr -->
-                        <div class="card project-card" tabindex="0" 
-                            data-title="DNSC Findr" 
-                            data-img="assets/images/projects/DNSCFNDR.png" 
-                            data-desc="The system’s purpose of our project is to make lost and found digitalized, helps Dnscians to report found item and retrieve lost item quickly, reduce stress, and keep the campus organized. The system’s main features like secure login, report item, claim item, schedule appointments, messaging and notification. This will give Dnscians a safe and easy way to manage lost and found items." 
-                            data-github="https://github.com/johnreeeeeeeel/DNSC_Findr_Final.git">
+
+                        <div class="card project-card"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modal<?= $row['id'] ?>">
+
                             <div class="card-header">
-                                <p class="card-title"></p>
+                                <p class="card-title">
+                                    <?= htmlspecialchars($row['title']) ?>
+                                </p>
                             </div>
 
                             <div class="card-body">
-                                <img class="card-img" alt="Project Image">
+                                <img class="card-img"
+                                    src="uploads/<?= htmlspecialchars($row['photo']) ?>"
+                                    alt="Project Image">
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="card project-card" tabindex="0" 
-                            data-title="Simple Ordering System" 
-                            data-img="assets/images/projects/SOS.png" 
-                            data-desc="This is simple Kiosk where in Customers can easily place order in &quot;Hour Burger&quot;"
-                            data-github="https://github.com/johnreeeeeeeel/Simple-Ordering-System-With-UI.git">
-                            <div class="card-header">
-                                <p class="card-title"></p>
+                    <!-- Modal -->
+                    <div class="modal fade projectModal" id="modal<?= $row['id'] ?>" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">
+                                        <?= htmlspecialchars($row['title']) ?>
+                                    </h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <img class="img-fluid" src="uploads/<?= htmlspecialchars($row['photo']) ?>">
+                                    <p>
+                                        <?= htmlspecialchars($row['description']) ?>
+                                    </p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <a href="<?= htmlspecialchars($row['github_link']) ?>" target="_blank" class="btn primary-btn">View on GitHub
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+
                             </div>
 
-                            <div class="card-body">
-                                <img class="card-img" alt="Project Image">
-                            </div>
                         </div>
+
                     </div>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="card project-card" tabindex="0" 
-                            data-title="Online Paluwagan System" 
-                            data-img="assets/images/projects/OPS.png" 
-                            data-desc="The Online Paluwagan System is designed to automate and manage the activities of a Paluwagan. This system automates the management of member contributions, schedules of payment, and payouts, allowing group handlers and members to better track financial transactions and reduce the risks associated with manual record-keeping."
-                            data-github="https://github.com/johnreeeeeeeel/Online_Paluwagan_System.git">
-                            <div class="card-header">
-                                <p class="card-title"></p>
-                            </div>
+                    <?php } ?>
 
-                            <div class="card-body">
-                                <img class="card-img" alt="Project Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="projectModal">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="modalTitle"></h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img id="modalImg" class="img-fluid" />
-                                <p id="modalDesc"></p>
-                            </div>
-
-                            <div class="modal-footer">
-                                <a id="modalGithub" href="" target="_blank" class="btn primary-btn">
-                                    View on GitHub
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 

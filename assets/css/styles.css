@@ -475,7 +475,7 @@ section .tab-content .active {
   object-fit: cover;
 }
 
-#projectModal .modal-content {
+.projectModal .modal-content {
   background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
   border: none;
@@ -486,24 +486,24 @@ section .tab-content .active {
   gap: 12px;
 }
 
-#projectModal .modal-content .modal-header,
-#projectModal .modal-content .modal-body,
-#projectModal .modal-content .modal-footer {
+.projectModal .modal-content .modal-header,
+.projectModal .modal-content .modal-body,
+.projectModal .modal-content .modal-footer {
   border: none;
   background-color: transparent !important;
   padding: 0;
 }
 
-#projectModal .modal-content .modal-header .btn-close,
-#projectModal .modal-content .modal-header .btn-close:focus,
-#projectModal .modal-content .modal-header .btn-close:active,
-#projectModal .modal-content .modal-header .btn-close:hover {
+.projectModal .modal-content .modal-header .btn-close,
+.projectModal .modal-content .modal-header .btn-close:focus,
+.projectModal .modal-content .modal-header .btn-close:active,
+.projectModal .modal-content .modal-header .btn-close:hover {
   outline: none !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-#projectModal .modal-content .modal-body img {
+.projectModal .modal-content .modal-body img {
   border-radius: 8px;
   width: 100%;
   height: auto;
@@ -511,7 +511,7 @@ section .tab-content .active {
   margin-bottom: 12px;
 }
 
-#projectModal .modal-content .modal-body p {
+.projectModal .modal-content .modal-body p {
   font-weight: 300;
   text-align: justify;
 }
@@ -676,7 +676,10 @@ section .tab-content .active {
 }
 
 #contact form {
-  max-width: 450px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 280px;
+  margin: 0 auto; 
   display: flex;
   flex-direction: column;
   gap: 12px;
