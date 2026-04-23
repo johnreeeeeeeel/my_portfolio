@@ -1,4 +1,4 @@
-# Changelogs
+## Changelogs
 
 ## v2.1.3
 ### Improvements
