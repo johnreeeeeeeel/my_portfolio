@@ -54,3 +54,55 @@
     color: #e74c3c !important;
 }
 
+.message  {
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+    min-height: 180px !important;
+    margin: auto;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    gap: 12px;
+}
+
+.message h1 {
+    text-transform: uppercase;
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(18px, 6vw, 38px);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0; 
+    text-align: center;
+}
+
+.success-message h1 {
+    color: #1e90ff;
+}
+
+.error-message h1 {
+    color: #ff6347;
+}
+
+.message small {
+    font-weight: 300;
+    text-align: center;
+}
+
+.email-content {
+    background-color: #1E90FF !important;
+}
+
+.email-content h1 {
+    text-transform: uppercase;
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(18px, 6vw, 38px);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0; 
+    text-align: left;
+}

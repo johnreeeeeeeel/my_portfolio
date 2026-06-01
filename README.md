@@ -1,22 +1,19 @@
 ## Changelogs
 
+## v2.1.5
+### Improvements
+- Organized directory
+- Minimal backend
+
 ## v2.1.4
 ### Improvements
-- Use MySQL to store and fetch projects
-- Apply "ADS" topics
-- Add hidden admin url to access admin panel and add projects
 - More responsive forms
-### Known Issues
-- Duplicate entries occur when reloading after adding a project
 
 ## v2.1.3
 ### Improvements
 - Adjusted size and position of hamburger menu on mobile
 - Added feedback feature
 - Small tweaks on mail style
-- Structured README
-### Known Issues
-- Feedback does not work on mobile
 
 ## v2.x.x
 ### Changes
@@ -40,5 +37,3 @@
 ## Future Improvement
 - Chatbot
 - Add micro projects such as school activities
-- Expanded "About Me" section
-	- Prefered front end over back end 

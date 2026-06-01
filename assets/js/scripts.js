@@ -1,16 +1,14 @@
 // Toogle theme
 function setTheme(theme) {
-    const html = document.documentElement;
-    const btn = document.getElementById("themeToggle");
-
-    html.setAttribute("data-bs-theme", theme);
+    document.documentElement.setAttribute("data-bs-theme", theme);
     localStorage.setItem("theme", theme);
 }
 
 function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute("data-bs-theme") || "dark";
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
+    const currentTheme =
+        document.documentElement.getAttribute("data-bs-theme") || "dark";
+
+    setTheme(currentTheme === "dark" ? "light" : "dark");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,8 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Remove focus from the card after closing the modal
-document.getElementById("projectModal").addEventListener("hide.bs.modal", () => {
-    document.activeElement.blur();
+document.querySelectorAll(".projectModal").forEach(modal => {
+    modal.addEventListener("hide.bs.modal", () => {
+        document.activeElement.blur();
+    });
 });
 
 // Go back to the previous page and reload it

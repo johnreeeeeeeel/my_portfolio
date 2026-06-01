@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -84,11 +84,11 @@
             </ul>
 
             <div class="other-buttons">
-                <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
+                <button id="themeToggleMobile" class="btn primary-btn" onclick="toggleTheme()">
                     <i class="fa-solid fa-circle-half-stroke"></i>
                 </button>
 
-                <button id="feedbackToggle" class="btn primary-btn" disabled>
+                <button id="feedbackToggleMobile" class="btn primary-btn" disabled>
                     <i class="fa-solid fa-comment"></i>
                 </button>
             </div>
@@ -143,11 +143,11 @@
         </ul>
 
         <div class="other-buttons">
-            <button id="themeToggle" class="btn primary-btn" onclick="toggleTheme()">
+            <button id="themeToggleDesktop" class="btn primary-btn" onclick="toggleTheme()">
                 <i class="fa-solid fa-circle-half-stroke"></i>
             </button>
 
-            <button id="feedbackToggle" class="btn primary-btn" data-bs-toggle="modal" data-bs-target="#feedbackModalDesktop">
+            <button id="feedbackToggleDesktop" class="btn primary-btn" data-bs-toggle="modal" data-bs-target="#feedbackModalDesktop">
                 <i class="fa-solid fa-comment"></i>
             </button>
         </div>
@@ -162,7 +162,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <form action="config/feedback.php" method="POST">
+                        <form action="app/emails/feedback_email.php" method="POST">
                             <input placeholder="Your Name" type="text" id="name" name="name">
                             <input placeholder="Your Email" type="email" id="email" name="email">
                             <textarea placeholder="Your Feedback" id="feedback" name="feedback" required></textarea>
@@ -180,7 +180,7 @@
     
     <section id="section">
         <div class="tab-content">
-            <!--Home Section-->
+            <!-- Home -->
             <div class="tab-pane active" id="home">
                 <?php
                     date_default_timezone_set('Asia/Manila');
@@ -234,78 +234,189 @@
                 </div>
             </div>
 
+            <!-- My projects -->
             <div class="tab-pane" id="projects">
                 <h1>
                     <i class="fa-solid fa-briefcase"></i>
                     My Projects
                 </h1>
 
-                <div class="row g-3">
+                <div class="card-container">
+                    <!-- UrSafe -->
+                    <div class="card projectCard" data-bs-toggle="modal" data-bs-target="#ursafeModal">
+                        <div class="card-header">
+                            <p class="card-title">
+                                UrSafe
+                            </p>
+                        </div>
 
-                    <?php
-                    require 'config/db_connection.php';
-
-                    $result = $conn->query("CALL getProjects()");
-                    ?>
-
-                    <?php while ($row = $result->fetch_assoc()) { ?>
-
-                    <!-- Card -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-
-                        <div class="card project-card"
-                            data-bs-toggle="modal"
-                            data-bs-target="#modal<?= $row['id'] ?>">
-
-                            <div class="card-header">
-                                <p class="card-title">
-                                    <?= htmlspecialchars($row['title']) ?>
-                                </p>
-                            </div>
-
-                            <div class="card-body">
-                                <img class="card-img"
-                                    src="uploads/<?= htmlspecialchars($row['photo']) ?>"
-                                    alt="Project Image">
-                            </div>
+                        <div class="card-body">
+                            <img src="assets\images\projects\ursafe.png" alt="reload" class="card-image">
                         </div>
                     </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade projectModal" id="modal<?= $row['id'] ?>" tabindex="-1">
+                    <!-- UrSafe modal -->
+                    <div class="modal fade projectModal" id="ursafeModal" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 class="modal-title">
-                                        <?= htmlspecialchars($row['title']) ?>
+                                        UrSafe
                                     </h4>
+
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
 
                                 <div class="modal-body">
-                                    <img class="img-fluid" src="uploads/<?= htmlspecialchars($row['photo']) ?>">
+                                    <img src="assets\images\projects\ursafe.png" alt="reload" class="modal-image">
+
                                     <p>
-                                        <?= htmlspecialchars($row['description']) ?>
+                                        UrSafe’s is a campus based personal storage Web-Based Application. Its mainpurpose is to streamline, digitalized, organized the management and application of personalstorage such as locker.
                                     </p>
                                 </div>
 
                                 <div class="modal-footer">
-                                    <a href="<?= htmlspecialchars($row['github_link']) ?>" target="_blank" class="btn primary-btn">View on GitHub
+                                    <a href="https://github.com/johnreeeeeeeel/ursafe.git" target="_blank" class="btn primary-btn">
+                                        View on GitHub
                                         <i class="fa-solid fa-angle-right"></i>
                                     </a>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
 
-                    <?php } ?>
+                    <!-- Butang Findr -->
+                    <div class="card projectCard" data-bs-toggle="modal" data-bs-target="#butangFindrModal">
+                        <div class="card-header">
+                            <p class="card-title">
+                                Butang Findr
+                            </p>
+                        </div>
 
+                        <div class="card-body">
+                            <img src="assets\images\projects\butang_findr.png" alt="reload" class="card-image">
+                        </div>
+                    </div>
+
+                    <!-- Butang Findr modal -->
+                    <div class="modal fade projectModal" id="butangFindrModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">
+                                        Butang Findr
+                                    </h4>
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <img src="assets\images\projects\butang_findr.png" alt="reload" class="modal-image">
+
+                                    <p>
+                                        Butang Findr is a campus based application that makes lost and found digitalized, helps campus community to report found item and retrieve lost item quickly, reduce stress, and keep the campus organized.
+                                    </p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <a href="https://github.com/johnreeeeeeeel/butang_findr.git" target="_blank" class="btn primary-btn">
+                                        View on GitHub
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simple Kiosk -->
+                    <div class="card projectCard" data-bs-toggle="modal" data-bs-target="#simpleKioskModal">
+                        <div class="card-header">
+                            <p class="card-title">
+                                Simple Kiosk
+                            </p>
+                        </div>
+
+                        <div class="card-body">
+                            <img src="assets\images\projects\simple_kiosk.png" alt="reload" class="card-image">
+                        </div>
+                    </div>
+
+                    <!-- Simple Kiosk modal -->
+                    <div class="modal fade projectModal" id="simpleKioskModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">
+                                        Simple Kiosk
+                                    </h4>
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <img src="assets\images\projects\simple_kiosk.png" alt="reload" class="modal-image">
+
+                                    <p>
+                                        This is simple Kiosk wherein customers can easily place orders with the use of a touchscreen interface.
+                                    </p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <a href="https://github.com/johnreeeeeeeel/simple_kiosk.git" target="_blank" class="btn primary-btn">
+                                        View on GitHub
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paluwagan Management System -->
+                    <div class="card projectCard" data-bs-toggle="modal" data-bs-target="#paluwaganModal">
+                        <div class="card-header">
+                            <p class="card-title">
+                                Paluwagan Management System
+                            </p>
+                        </div>
+
+                        <div class="card-body">
+                            <img src="assets\images\projects\paluwagan_management_system.png" alt="reload" class="card-image">
+                        </div>
+                    </div>
+
+                    <!-- Paluwagan Management System modal -->
+                    <div class="modal fade projectModal" id="paluwaganModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">
+                                        Paluwagan Management System
+                                    </h4>
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <img src="assets\images\projects\paluwagan_management_system.png" alt="reload" class="modal-image">
+
+                                    <p>
+                                        This is the Paluwagan Management System wherein paluwagan hadlers can efficiently manage and track paluwagan activities.
+                                    </p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <a href="https://github.com/johnreeeeeeeel/paluwagan_management_system.git" target="_blank" class="btn primary-btn">
+                                        View on GitHub
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <!-- About me -->
             <div class="tab-pane" id="about">
                 <h1>
                     <i class="fa-solid fa-user"></i>
@@ -430,8 +541,9 @@
                 </div>
             </div>
 
+            <!-- Contact -->
             <div class="tab-pane" id="contact">
-                <form action="config/contact.php" method="POST">
+                <form action="app/emails/contact_email.php" method="POST">
                     <h1>
                         <i class="fa-solid fa-envelope"></i>
                         Get In Touch

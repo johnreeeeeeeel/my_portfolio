@@ -438,7 +438,14 @@ section .tab-content .active {
   gap: 6px;
 }
 
-#projects .project-card {
+#projects .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+#projects .card-container .projectCard {
   border: none;
   border-radius: 12px;
   display: flex;
@@ -450,25 +457,25 @@ section .tab-content .active {
   cursor: pointer;
 }
 
-#projects .card .card-header {
+#projects .card-container .projectCard .card-header {
   padding: 0;
   border: none;
   background-color: transparent !important;
 }
 
-#projects .card .card-header p {
+#projects .card-container .projectCard .card-header p {
   font-size: 18px;
   text-align: center;
   color: var(--bs-body-color);
 }
 
-#projects .card .card-body {
+#projects .card-container .projectCard .card-body {
   padding: 0;
   border: none;
   background-color: transparent !important;
 }
 
-#projects .card .card-body img {
+#projects .card-container .projectCard .card-body img {
   border-radius: 8px;
   height: 200px;
   width: 100%;
