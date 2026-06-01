@@ -36,4 +36,3 @@
 
 ## Future Improvement
 - Chatbot
-- Add micro projects such as school activities
