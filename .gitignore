@@ -1,2 +1,1 @@
-app/emails/*
-app/PHPMailer/*
+config/*

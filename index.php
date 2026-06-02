@@ -1,3 +1,7 @@
+<?php
+$tab = $_GET['tab'] ?? 'home';
+?>
+
 <html lang="en" data-bs-theme="dark">
 
 <head>
@@ -58,25 +62,25 @@
 
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#home">
+                    <a class="nav-link <?= $tab == 'home' ? 'active' : '' ?>" href="?tab=home">
                         <i class="fa-solid fa-house"></i>
                         Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#projects">
+                    <a class="nav-link <?= $tab == 'projects' ? 'active' : '' ?>" href="?tab=projects">
                         <i class="fa-solid fa-briefcase"></i>
                         Projects
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#about">
+                    <a class="nav-link <?= $tab == 'about' ? 'active' : '' ?>" href="?tab=about">
                         <i class="fa-solid fa-user"></i>
                         About
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#contact">
+                    <a class="nav-link <?= $tab == 'contact' ? 'active' : '' ?>" href="?tab=contact">
                         <i class="fa-solid fa-envelope"></i>
                         Contact
                     </a>
@@ -117,25 +121,25 @@
 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#home">
+                <a class="nav-link <?= $tab == 'home' ? 'active' : '' ?>" href="?tab=home">
                     <i class="fa-solid fa-house"></i>
                     Home
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#projects">
+                <a class="nav-link <?= $tab == 'projects' ? 'active' : '' ?>" href="?tab=projects">
                     <i class="fa-solid fa-briefcase"></i>
                     Projects
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#about">
+                <a class="nav-link <?= $tab == 'about' ? 'active' : '' ?>" href="?tab=about">
                     <i class="fa-solid fa-user"></i>
                     About
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#contact">
+                <a class="nav-link <?= $tab == 'contact' ? 'active' : '' ?>" href="?tab=contact">
                     <i class="fa-solid fa-envelope"></i>
                     Contact
                 </a>
@@ -181,7 +185,7 @@
     <section id="section">
         <div class="tab-content">
             <!-- Home -->
-            <div class="tab-pane active" id="home">
+            <div class="tab-pane <?= $tab == 'home' ? 'active show' : '' ?>" id="home">
                 <?php
                     date_default_timezone_set('Asia/Manila');
 
@@ -235,7 +239,7 @@
             </div>
 
             <!-- My projects -->
-            <div class="tab-pane" id="projects">
+            <div class="tab-pane <?= $tab == 'projects' ? 'active show' : '' ?>" id="projects">
                 <h1>
                     <i class="fa-solid fa-briefcase"></i>
                     My Projects
@@ -260,9 +264,15 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">
-                                        UrSafe
-                                    </h4>
+                                    <div class="modal-title">
+                                        <h4>
+                                            UrSafe
+                                        </h4>
+
+                                        <p>
+                                            Campus-Based Personal Storage Web Application
+                                        </p>
+                                    </div>
 
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
@@ -270,16 +280,33 @@
                                 <div class="modal-body">
                                     <img src="assets\images\projects\ursafe.png" alt="reload" class="modal-image">
 
-                                    <p>
-                                        UrSafe’s is a campus based personal storage Web-Based Application. Its mainpurpose is to streamline, digitalized, organized the management and application of personalstorage such as locker.
-                                    </p>
+                                    <div class="languages">
+                                        <span class="badge rounded-pill lang-html">HTML</span>
+                                        <span class="badge rounded-pill lang-css">CSS</span>
+                                        <span class="badge rounded-pill lang-js">JavaScript</span>
+                                        <span class="badge rounded-pill lang-php">PHP</span>
+                                        <span class="badge rounded-pill lang-mysql">MySQL</span>
+                                    </div>
+
+                                    <div class="description">
+                                        <p>
+                                            UrSafe’s is a campus based personal storage Web-Based Application. Its mainpurpose is to streamline, digitalized, organized the management and application of personalstorage such as locker.
+                                        </p>
+                                    </div>
                                 </div>
 
                                 <div class="modal-footer">
-                                    <a href="https://github.com/johnreeeeeeeel/ursafe.git" target="_blank" class="btn primary-btn">
-                                        View on GitHub
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
+                                    <div class="action-buttons">
+                                        <a href="https://ursafe.heliohost.us" target="_blank" class="btn primary-btn">
+                                            <i class="fa-solid fa-play"></i>
+                                            View Live
+                                        </a>
+
+                                        <a href="https://github.com/johnreeeeeeeel/ursafe.git" target="_blank" class="btn primary-btn">
+                                            <i class="fa-solid fa-code-branch"></i>
+                                            View on GitHub
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -303,9 +330,15 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">
-                                        Butang Findr
-                                    </h4>
+                                    <div class="modal-title">
+                                        <h4>
+                                            Butang Findr
+                                        </h4>
+
+                                        <p>
+                                            Campus-Based Lost & Found Web Application
+                                        </p>
+                                    </div>
 
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
@@ -313,16 +346,33 @@
                                 <div class="modal-body">
                                     <img src="assets\images\projects\butang_findr.png" alt="reload" class="modal-image">
 
-                                    <p>
-                                        Butang Findr is a campus based application that makes lost and found digitalized, helps campus community to report found item and retrieve lost item quickly, reduce stress, and keep the campus organized.
-                                    </p>
+                                    <div class="languages">
+                                        <span class="badge rounded-pill lang-html">HTML</span>
+                                        <span class="badge rounded-pill lang-css">CSS</span>
+                                        <span class="badge rounded-pill lang-js">JavaScript</span>
+                                        <span class="badge rounded-pill lang-php">PHP</span>
+                                        <span class="badge rounded-pill lang-mysql">MySQL</span>
+                                    </div>
+
+                                    <div class="description">
+                                        <p>
+                                            Butang Findr is a campus based application that makes lost and found digitalized, helps campus community to report found item and retrieve lost item quickly, reduce stress, and keep the campus organized.
+                                        </p>
+                                    </div>
                                 </div>
 
                                 <div class="modal-footer">
-                                    <a href="https://github.com/johnreeeeeeeel/butang_findr.git" target="_blank" class="btn primary-btn">
-                                        View on GitHub
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
+                                    <div class="action-buttons">
+                                        <button href="" target="_blank" class="btn primary-btn" disabled>
+                                            <i class="fa-solid fa-play"></i>
+                                            View Live
+                                        </button>
+
+                                        <a href="https://github.com/johnreeeeeeeel/butang_findr.git" target="_blank" class="btn primary-btn">
+                                            <i class="fa-solid fa-code-branch"></i>
+                                            View on GitHub
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -346,9 +396,15 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">
-                                        Simple Kiosk
-                                    </h4>
+                                    <div class="modal-title">
+                                        <h4>
+                                            Simple Kiosk
+                                        </h4>
+
+                                        <p>
+                                            Touchscreen Ordering System
+                                        </p>
+                                    </div>
 
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
@@ -356,16 +412,31 @@
                                 <div class="modal-body">
                                     <img src="assets\images\projects\simple_kiosk.png" alt="reload" class="modal-image">
 
-                                    <p>
-                                        This is simple Kiosk wherein customers can easily place orders with the use of a touchscreen interface.
-                                    </p>
+                                    <div class="languages">
+                                        <span class="badge rounded-pill lang-html">HTML</span>
+                                        <span class="badge rounded-pill lang-css">CSS</span>
+                                        <span class="badge rounded-pill lang-js">JavaScript</span>
+                                    </div>
+
+                                    <div class="description">
+                                        <p>
+                                            This is simple Kiosk wherein customers can easily place orders with the use of a touchscreen interface.
+                                        </p>
+                                    </div>
                                 </div>
 
                                 <div class="modal-footer">
-                                    <a href="https://github.com/johnreeeeeeeel/simple_kiosk.git" target="_blank" class="btn primary-btn">
-                                        View on GitHub
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
+                                    <div class="action-buttons">
+                                        <a href="https://simple-kiosk.vercel.app" target="_blank" class="btn primary-btn">
+                                            <i class="fa-solid fa-play"></i>
+                                            View Live
+                                        </a>
+
+                                        <a href="https://github.com/johnreeeeeeeel/simple_kiosk.git" target="_blank" class="btn primary-btn">
+                                            <i class="fa-solid fa-code-branch"></i>
+                                            View on GitHub
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -389,9 +460,11 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">
-                                        Paluwagan Management System
-                                    </h4>
+                                    <div class="modal-title">
+                                        <h4>
+                                            Paluwagan Management System
+                                        </h4>
+                                    </div>
 
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
@@ -399,16 +472,30 @@
                                 <div class="modal-body">
                                     <img src="assets\images\projects\paluwagan_management_system.png" alt="reload" class="modal-image">
 
-                                    <p>
-                                        This is the Paluwagan Management System wherein paluwagan hadlers can efficiently manage and track paluwagan activities.
-                                    </p>
+                                    <div class="languages">
+                                        <span class="badge rounded-pill lang-java">Java</span>
+                                        <span class="badge rounded-pill lang-mysql">MySQL</span>
+                                    </div>
+
+                                    <div class="description">
+                                        <p>
+                                            This is the Paluwagan Management System wherein paluwagan hadlers can efficiently manage and track paluwagan activities.
+                                        </p>
+                                    </div>
                                 </div>
 
                                 <div class="modal-footer">
-                                    <a href="https://github.com/johnreeeeeeeel/paluwagan_management_system.git" target="_blank" class="btn primary-btn">
-                                        View on GitHub
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </a>
+                                    <div class="action-buttons">
+                                        <button href="" target="_blank" class="btn primary-btn" disabled>
+                                            <i class="fa-solid fa-play"></i>
+                                            View Live
+                                        </button>
+
+                                        <a href="https://github.com/johnreeeeeeeel/palauwagan_management_system.git" target="_blank" class="btn primary-btn">
+                                            <i class="fa-solid fa-code-branch"></i>
+                                            View on GitHub
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -417,7 +504,7 @@
             </div>
 
             <!-- About me -->
-            <div class="tab-pane" id="about">
+            <div class="tab-pane <?= $tab == 'about' ? 'active show' : '' ?>" id="about">
                 <h1>
                     <i class="fa-solid fa-user"></i>
                     About Me
@@ -542,7 +629,7 @@
             </div>
 
             <!-- Contact -->
-            <div class="tab-pane" id="contact">
+            <div class="tab-pane <?= $tab == 'contact' ? 'active show' : '' ?>" id="contact">
                 <form action="app/emails/contact_email.php" method="POST">
                     <h1>
                         <i class="fa-solid fa-envelope"></i>

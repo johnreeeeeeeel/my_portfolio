@@ -54,6 +54,73 @@
     color: #e74c3c !important;
 }
 
+/* Badges */
+.badge {
+    font-weight: 400;
+}
+.lang-html {
+  background: #E34F26;
+  color: #f1f1f1;
+}
+
+.lang-css {
+  background: #1572B6;
+  color: #f1f1f1;
+}
+
+.lang-js {
+  background: #F7DF1E;
+  color: #222222;
+}
+
+.lang-php {
+  background: #777BB4;
+  color: #f1f1f1;
+}
+
+.lang-mysql {
+  background: #4479A1;
+  color: #f1f1f1;
+}
+
+.lang-java {
+  background: #ED8B00;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .message  {
     background-color: var(--bs-tertiary-bg);
     color: var(--bs-body-color);

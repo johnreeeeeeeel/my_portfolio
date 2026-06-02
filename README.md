@@ -1,5 +1,10 @@
 ## Changelogs
 
+## v2.1.6
+### Improvements
+- Add config and add it in .gitignore
+- Improve project card and modal
+
 ## v2.1.5
 ### Improvements
 - Organized directory
