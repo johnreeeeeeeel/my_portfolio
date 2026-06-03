@@ -46,7 +46,7 @@ $tab = $_GET['tab'] ?? 'home';
 
             <div class="profile-info">
                 <h5>Feby Johnrel R. Malbino</h5>
-                <small>Web Developer & Designer</small>
+                <small>Future Web Developer & Designer</small>
             </div>
 
             <div class="action-buttons">
@@ -105,7 +105,7 @@ $tab = $_GET['tab'] ?? 'home';
 
         <div class="profile-info">
             <h5>Feby Johnrel R. Malbino</h5>
-            <small>Web Developer & Designer</small>
+            <small>Future Web Developer & Designer</small>
         </div>
 
         <div class="action-buttons">
@@ -215,6 +215,11 @@ $tab = $_GET['tab'] ?? 'home';
                         <p>I'm a BSIT student, still learning and improving my skills.</p>
                         <p>I'm passionate about creating and designing.</p>
                         <p>Beside coding, I also enjoy film making.</p>
+
+                        <a class="btn primary-btn" href="?tab=about">
+                            More About Me
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
                     </div>
 
                     <div class="social-links">
@@ -245,6 +250,12 @@ $tab = $_GET['tab'] ?? 'home';
                     My Projects
                 </h1>
 
+                <!-- Latest Projects -->
+                <h4>
+                    Latest Projects
+                    <i class="fa-solid fa-angle-right"></i>
+                </h4>
+
                 <div class="card-container">
                     <!-- UrSafe -->
                     <div class="card projectCard" data-bs-toggle="modal" data-bs-target="#ursafeModal">
@@ -255,7 +266,7 @@ $tab = $_GET['tab'] ?? 'home';
                         </div>
 
                         <div class="card-body">
-                            <img src="assets\images\projects\ursafe.png" alt="reload" class="card-image">
+                            <img src="assets\images\thumbnails\ursafe.png" alt="reload" class="card-image">
                         </div>
                     </div>
 
@@ -290,7 +301,7 @@ $tab = $_GET['tab'] ?? 'home';
 
                                     <div class="description">
                                         <p>
-                                            UrSafe’s is a campus based personal storage Web-Based Application. Its mainpurpose is to streamline, digitalized, organized the management and application of personalstorage such as locker.
+                                            UrSafe’s is a campus based personal storage Web-Based Application. Its main purpose is to streamline, digitalized, organized the management and application of personalstorage such as locker.
                                         </p>
                                     </div>
                                 </div>
@@ -304,7 +315,69 @@ $tab = $_GET['tab'] ?? 'home';
 
                                         <a href="https://github.com/johnreeeeeeeel/ursafe.git" target="_blank" class="btn primary-btn">
                                             <i class="fa-solid fa-code-branch"></i>
-                                            View on GitHub
+                                            View Repository
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Library Management System -->
+                    <div class="card projectCard" data-bs-toggle="modal" data-bs-target="#libraryModal">
+                        <div class="card-header">
+                            <p class="card-title">
+                                Library Management System
+                            </p>
+                        </div>
+
+                        <div class="card-body">
+                            <img src="assets\images\thumbnails\library_management_system.png" alt="reload" class="card-image">
+                        </div>
+                    </div>
+
+                    <!-- Library Management System modal -->
+                    <div class="modal fade projectModal" id="libraryModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="modal-title">
+                                        <h4>
+                                            Library Management System
+                                        </h4>
+
+                                        <p>
+                                            Simple Java-Based Library Management System
+                                        </p>
+                                    </div>
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <img src="assets\images\thumbnails\library_management_system.png" alt="reload" class="card-image">
+
+                                    <div class="languages">
+                                        <span class="badge rounded-pill lang-java">Java</span>
+                                    </div>
+
+                                    <div class="description">
+                                        <p>
+                                            A simple Java Library Management Management System using Linked List and Bloom Filter Data Structure and Algorithm and used Command Line Interface.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <div class="action-buttons">
+                                        <button href="" target="_blank" class="btn primary-btn" disabled>
+                                            <i class="fa-solid fa-play"></i>
+                                            View Live
+                                        </button>
+
+                                        <a href="https://github.com/johnreeeeeeeel/simple_java_library_management_system.git" target="_blank" class="btn primary-btn">
+                                            <i class="fa-solid fa-code-branch"></i>
+                                            View Repository
                                         </a>
                                     </div>
                                 </div>
@@ -321,7 +394,7 @@ $tab = $_GET['tab'] ?? 'home';
                         </div>
 
                         <div class="card-body">
-                            <img src="assets\images\projects\butang_findr.png" alt="reload" class="card-image">
+                            <img src="assets\images\thumbnails\butang_findr.png" alt="reload" class="card-image">
                         </div>
                     </div>
 
@@ -370,14 +443,22 @@ $tab = $_GET['tab'] ?? 'home';
 
                                         <a href="https://github.com/johnreeeeeeeel/butang_findr.git" target="_blank" class="btn primary-btn">
                                             <i class="fa-solid fa-code-branch"></i>
-                                            View on GitHub
+                                            View Repository
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <!-- Old Projects -->
+                <h4>
+                    Old Projects
+                    <i class="fa-solid fa-angle-right"></i>
+                </h4>
+
+                <div class="card-container">
                     <!-- Simple Kiosk -->
                     <div class="card projectCard" data-bs-toggle="modal" data-bs-target="#simpleKioskModal">
                         <div class="card-header">
@@ -387,7 +468,7 @@ $tab = $_GET['tab'] ?? 'home';
                         </div>
 
                         <div class="card-body">
-                            <img src="assets\images\projects\simple_kiosk.png" alt="reload" class="card-image">
+                            <img src="assets\images\thumbnails\simple_kiosk.png" alt="reload" class="card-image">
                         </div>
                     </div>
 
@@ -434,7 +515,7 @@ $tab = $_GET['tab'] ?? 'home';
 
                                         <a href="https://github.com/johnreeeeeeeel/simple_kiosk.git" target="_blank" class="btn primary-btn">
                                             <i class="fa-solid fa-code-branch"></i>
-                                            View on GitHub
+                                            View Repository
                                         </a>
                                     </div>
                                 </div>
@@ -451,7 +532,7 @@ $tab = $_GET['tab'] ?? 'home';
                         </div>
 
                         <div class="card-body">
-                            <img src="assets\images\projects\paluwagan_management_system.png" alt="reload" class="card-image">
+                            <img src="assets\images\thumbnails\paluwagan_management_system.png" alt="reload" class="card-image">
                         </div>
                     </div>
 
@@ -493,7 +574,7 @@ $tab = $_GET['tab'] ?? 'home';
 
                                         <a href="https://github.com/johnreeeeeeeel/palauwagan_management_system.git" target="_blank" class="btn primary-btn">
                                             <i class="fa-solid fa-code-branch"></i>
-                                            View on GitHub
+                                            View Repository
                                         </a>
                                     </div>
                                 </div>
@@ -519,7 +600,7 @@ $tab = $_GET['tab'] ?? 'home';
                         <h3>Hello World!</h3>
                         <h1>I'm Feby Johnrel R. Malbino</h1>
                         <small>A student taking up a Bachelor of Science in Information Technology at Davao del Norte State College.</small>
-                        <small>A future Web Developer and UI/UX Designer.</small>
+                        <small>A future Web Developer and Designer.</small>
                         <small>I'm focused on user-centered design principles.</small>
                         <small>I approach problems by breaking them down into smaller parts to solve them more efficiently.</small>
                         <br>
@@ -607,7 +688,7 @@ $tab = $_GET['tab'] ?? 'home';
 
                 <div class="hobby">
                     <div>
-                        <h1>Photography & Videogeraphy</h1>
+                        <h1>Photography & Videogaraphy</h1>
                         <small>Besides coding and designing, I also enjoy capturing photos and videos of random subjects, from everyday objects to landscapes.</small>
                     </div>
 
@@ -624,6 +705,52 @@ $tab = $_GET['tab'] ?? 'home';
 
                     <div>
                         <img src="assets/images/other/cycling.jpg" alt="reload" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="academic-timeline">
+                    <div class="header">
+                        <h1>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Academic Timeline
+                        </h1>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item left">
+                            <div class="content">
+                                <h2>2025–2026</h2>
+                                <p>2nd Year College</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item right">
+                            <div class="content">
+                                <h2>2024–2025</h2>
+                                <p>1st Year College</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item left">
+                            <div class="content">
+                                <h2>2022-2024</h2>
+                                <p>Senior High</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item right">
+                            <div class="content">
+                                <h2>2018–2022</h2>
+                                <p>Junior High</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item left">
+                            <div class="content">
+                                <h2>2012-2018</h2>
+                                <p>Elementary</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
